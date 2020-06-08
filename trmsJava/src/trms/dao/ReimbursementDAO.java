@@ -10,8 +10,7 @@ public class ReimbursementDAO {
 	
 	private final String jdbcURL = "jdbc:postgresql://freuddb.c4hlxdpgql5j.us-east-2.rds.amazonaws.com:5432/FreudDB";
 	private final String jdbcUsername = "postgres";
-	
-	
+	private final String jdbcPassword = "sandbox1";
 	
 	private static final String INSERT_REIMBURSEMENT_SQL = "INSERT INTO reimbursement3 (re_id, re_first_name, re_last_name,"
 			                                                       + "re_event_name, re_event_type, re_event_date, re_event_description, re_cost, re_grade_format,"
@@ -26,6 +25,13 @@ public class ReimbursementDAO {
 	
 	public ReimbursementDAO() {
 	}
+	
+//	public static void main(String[] args){
+//		ReimbursementDAO reDao = new ReimbursementDAO();
+//		reDao.getConnection();
+//		Reimbursement findById = reDao.findById(2);
+//		System.out.println(findById);
+//	}
 	
 	protected Connection getConnection() {
 		Connection connection = null;
