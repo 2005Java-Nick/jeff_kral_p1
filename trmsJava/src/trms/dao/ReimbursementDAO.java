@@ -10,7 +10,7 @@ public class ReimbursementDAO {
 	
 	private final String jdbcURL = "jdbc:postgresql://freuddb.c4hlxdpgql5j.us-east-2.rds.amazonaws.com:5432/FreudDB";
 	private final String jdbcUsername = "postgres";
-	private final String jdbcPassword = "sandbox1";
+	
 	
 	
 	private static final String INSERT_REIMBURSEMENT_SQL = "INSERT INTO reimbursement3 (re_id, re_first_name, re_last_name,"
