@@ -1,0 +1,96 @@
+<form  id="reimbursement-form" method="POST">
+    <h1>Create Reimbursement</h1>
+<fieldset id="reimbursement">
+ <legend>Reimbursement</legend>
+ <ul style="list-style: none;">
+      <li>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" name="firstName" required="required" autofocus="autofocus" maxlength="30" placeholder="first name">
+      </li>
+      <li>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" name="lastName" required="required" autofocus="autofocus" maxlength="30" placeholder="last name">
+      </li>
+      <li>
+        <label for="eventName">Event Name:</label>
+        <input id="eventName" type="text" name="eventName" required="required" autofocus="autofocus" maxlength="30" placeholder="event name">
+      </li>
+
+      <p>Event Type:</p>
+<div>
+  <input class="radio" type="radio" id="uni-course" name="event-type" value="uni-course"
+         checked>
+  <label for="uni-course">University Course</label>
+
+
+
+  <input class="radio" type="radio" id="seminar" name="event-type" value="seminar">
+  <label for="seminar">Seminar</label>
+
+
+
+  <input class="radio" type="radio" id="cert-prep" name="event-type" value="cert-prep">
+  <label for="cert-prep">Certification Prep</label>
+
+
+  <input class="radio" type="radio" id="certification" name="event-type" value="certification">
+  <label for="certification">Certification</label>
+
+
+  <input class="radio" type="radio" id="tech-training" name="event-type" value="tech-training">
+  <label for="tech-training">Tech Training</label>
+
+
+  <input class="radio" type="radio" id="other" name="event-type" value="other">
+  <label for="other">Other</label>
+</div>
+
+      <li>
+        <label for="event-datetime">Event Date/Time:</label>
+        <input id="event-datetime" type="datetime-local" name="event-datetime" required="required" value="2020-06-12T19:30" min="2020-06-12T19:30" max="2021-06-12T19:30">
+      </li>
+      <li>
+        <label for="event-location">Event Location:</label>
+        <input id="event-location" type="text" name="event-location" required="required" autofocus="autofocus" minlength="1" maxlength="40" placeholder="location">
+      </li>
+      <li>
+        <label for="event-description">Event Description:</label>
+        <textarea rows="4" cols="50" id="event-description" name="event-description" required="required" autofocus="autofocus" placeholder="please enter a short description of the event"></textarea>
+      </li>
+      <li>
+        <label for="event-cost">Event Cost:</label>
+        <input id="event-cost" type="number" name="event-cost" required="required" min="5" max="2000" step="5">
+      </li>
+
+      <p>Grade Format:</p>
+      <div>
+        <input class="radio" type="radio" id="pass-fail" name="grade-format" value="pass_fail"
+               checked>
+        <label for="pass-fail">Pass/Fail</label>
+      
+      
+      
+        <input class="radio" type="radio" id="percent-grade" name="grade-format" value="percent_grade">
+        <label for="percent-grade">Percent Grade 0-100%</label>
+      
+        <input class="radio" type="radio" id="presentation-grade" name="grade-format" value="presentation">
+        <label for="presentation-grade">Presentation</label>
+      
+      
+        <input class="radio" type="radio" id="letter-grade" name="grade-format" value="letter_grade">
+        <label for="letter-grade">Letter Grade A-F:</label>
+      </div>
+
+      <li>
+        <label for="work-justifiation">Work Justification:</label>
+        <textarea rows="4" cols="50" id="work-justification" name="work-justification" required="required" autofocus="autofocus" placeholder="please enter how this event will help you in your job"></textarea>
+      </li>
+      <li>
+        <label for="attachment">Attach File:</label>
+        <input type="file" id="attachment" name="attachment">
+      </li>
+</ul>
+<br/>
+<button (click)="createReimbursement()" type="submit" class="create-button">Submit Reimbursement</button>
+</fieldset>
+</form>
